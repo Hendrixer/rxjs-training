@@ -1,0 +1,21 @@
+{
+  "extension": [
+    ".ts"
+  ],
+  "reporter": [
+    "html",
+    "text-summary"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "cache": true,
+  "instrument": false,
+  "sourceMap": false,
+  "check-coverage": true,
+  "lines": 80,
+  "statements": 99,
+  "functions": 99,
+  "branches": 100
+}

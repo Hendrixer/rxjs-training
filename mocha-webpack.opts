@@ -1,0 +1,7 @@
+--colors
+--webpack-config build/webpack.test.js
+--require test/globals.js
+--include test/setup.js
+--reporter '../../../../test/keen-reporter'
+--full-trace
+src/**/*.spec.js

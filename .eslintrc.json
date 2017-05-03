@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node":true,
+    "mocha": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "expect": true,
+    "sinon": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}

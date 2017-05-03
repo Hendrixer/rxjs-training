@@ -1,0 +1,38 @@
+{
+  "name": "training-starter",
+  "version": "0.0.1",
+  "description": "starter repo to base all hearst training from",
+  "main": "index.js",
+  "author": "scott moss <scott@angularclass.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "7.8"
+  },
+  "scripts": {
+    "test": "mocha-webpack",
+    "test:watch": "npm test -- --watch",
+    "coverage": "NODE_ENV=testing COVERAGE=true nyc npm test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "jsdom": "^10.1.0",
+    "mocha": "^3.3.0",
+    "nyc": "^10.3.0",
+    "sinon": "^2.2.0",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "del-cli": "^0.2.1",
+    "eslint": "^3.19.0",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "mocha-webpack": "next",
+    "sinon-chai": "^2.10.0",
+    "source-map-support": "^0.4.15",
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
