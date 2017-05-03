@@ -1,0 +1,44 @@
+{
+  "angularCompilerOptions": {
+    "excludes": [],
+    "entryModule": "./src/app/app.module#AppModule"
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true,
+    "useTranspileModule": true,
+    "doTypeCheck": true,
+    "forkChecker": true
+  },
+  "exclude": [
+    "node_modules",
+    "../node_modules",
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "inlineSources": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "stripInternal": false,
+    "target": "es5",
+    
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "node",
+      "chai",
+      "mocha",
+      "sinon"
+    ]
+  }
+}
