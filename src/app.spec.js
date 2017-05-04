@@ -2,9 +2,9 @@ const add = require('./app')
 
 describe('Testing here', () => {
   it('should test', () => {
-    expect(add(2)).to.equal(7)
+    expect(add(2)).to.equal(89)
   })
   it('should test', () => {
-    expect(add(2)).to.equal(4)
+    expect(add(2)).to.equal(20)
   })
 })

@@ -1,6 +1,7 @@
 {
   "extension": [
-    ".ts"
+    ".ts",
+    ".js"
   ],
   "reporter": [
     "html",

@@ -4,4 +4,4 @@
 --include test/setup.js
 --reporter '../../../../test/keen-reporter'
 --full-trace
-src/**/*.spec.{ts,js}
+
