@@ -17,17 +17,15 @@ class KeenReporter extends Spec {
   constructor(runner) {
     super(runner)
     
-    this.events = {
-      test: [],
-      start: []
+    this.keenEvents = {
+      fail: [],
+      complete: []
     }
 
     this.runner = runner
     this.currentSuiteTitle = ''
-    this.runner.on('pass', this.onPass.bind(this))
     this.runner.on('fail', this.onFail.bind(this))
     this.runner.on('end', this.onEnd.bind(this))
-    this.runner.on('start', this.onStart.bind(this))
     this.runner.on('suite', (suite) => {
       this.currentSuiteTitle = this.getSuiteTitle(suite)
     })
@@ -42,28 +40,8 @@ class KeenReporter extends Spec {
     return titleResult
   }
 
-  onStart() {
-    this.events.start.push({
-      curriculum: pJSON.name,
-      first_name: user.first_name,
-      last_name: user.last_name
-    })
-  }
-
-  onPass(a) {
-    this.events.test.push({
-      curriculum: pJSON.name,
-      first_name: user.first_name,
-      last_name: user.last_name,
-      suite: this.currentSuiteTitle,
-      title: a.title,
-      pass: true,
-      fail: false
-    })
-  }
-
   onFail(a) {
-    this.events.test.push({
+    this.keenEvents.fail.push({
       curriculum: pJSON.name,
       first_name: user.first_name,
       last_name: user.last_name,
@@ -72,10 +50,21 @@ class KeenReporter extends Spec {
       pass: false,
       fail: true
     })
-  }
+  } 
 
   onEnd () {
-    keen.recordEvents(this.events, () => {
+    this.keenEvents.complete.push({
+      curriculum: pJSON.name,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      total_tests: this.stats.tests,
+      passes: this.stats.passes,
+      failures: this.stats.failures,
+      skipped: this.stats.pending,
+      performance: (this.stats.passes / this.stats.tests) * 100
+    })
+
+    keen.recordEvents(this.keenEvents, () => {
       og()
     })
   }
