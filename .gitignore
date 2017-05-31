@@ -5,3 +5,5 @@ dist
 .DS_Store
 coverage
 .nyc_output
+.idea
+training.json

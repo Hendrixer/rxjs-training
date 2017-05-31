@@ -3,7 +3,7 @@ const keen = require('./keen')
 const pJSON = require('../package.json')
 
 if (!user.first_name && !user.last_name) {
-  console.error('You must add your first and last name to training.json please')
+  console.error('You must add your first_name and last_name to training.json please')
   process.exit(1)
 }
 
