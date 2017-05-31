@@ -57,7 +57,7 @@ describe('Rxjs', () => {
     })
   })
 
-  describe('#unsub', () => {
+  xdescribe('#unsub', () => {
     it('should be a function', () => {
       expect(code.unsub).to.be.a('function')
     })
