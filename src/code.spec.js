@@ -78,7 +78,8 @@ describe('Rxjs', () => {
     })
 
   })
-  describe('#mergeData', () => {
+
+  xdescribe('#mergeData', () => {
     it('should be a function', () => {
       expect(code.mergeData).to.be.a('function')
     })

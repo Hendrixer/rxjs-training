@@ -18,13 +18,3 @@ export const mapData = (array = []) => {
   .filter(n => !isNaN(parseFloat(n)) && isFinite(n))
   .map(n => n * 2)
 }
-
-export const unsub = (o) => {
-  return o
-  .takeWhile(v => v % 2 === 0)
-}
-
-export const mergeData = (o1, o2) => {
-  return o1
-  .mergeMap(v => o2(v))
-}
