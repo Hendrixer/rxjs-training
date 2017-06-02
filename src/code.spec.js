@@ -52,7 +52,7 @@ describe('Rxjs', () => {
     it('should not error if no input is given', done => {
       code.mapData()
       .subscribe(noop, (e) => {
-        expect(e).to.no.be.ok
+        expect(e).to.not.be.ok
       }, done)
     })
   })
